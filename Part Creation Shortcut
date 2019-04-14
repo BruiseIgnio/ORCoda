@@ -1,0 +1,25 @@
+function CurrentCode()  -- Everytime we create a part, we have to do what follows in this function.
+   local Brick = workspace.Brick
+   local Part = Instance.new("Part") --- or Instance.new("Part", workspace) with workspace being its parent.
+   Part.Parent = workspace
+   Part.Name = "Wings"
+   Part.Color = Color3.new(1, 1, 1) --- White
+   Part.CFrame = Brick.CFrame
+end
+
+
+--------
+
+function CreateProperties(part, parent, name, color, Otherpart) --- Similar to the code above, but is only written once, while the..
+   part.Parent = parent --- .. the code written above must be written every single time we want to create an object.
+   part.Name = name
+   part.Color = color
+   part.CFrame = Otherpart.CFrame
+end
+
+
+function AdjustedCode() --- This will call another function to do built just like the code above, except all we have to do from now on is..
+   local Brick = workspace.Brick --- .. give this funciton the values for each part we create to reduce time.
+   local Part = Instance.new("Part")
+   CreateProperties(Part, workspace, "Wings", Color3.new(1, 1, 1), Brick) --- The function we are calling to "do work."
+end
