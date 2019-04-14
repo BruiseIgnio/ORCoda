@@ -15,6 +15,7 @@ function CreateProperties(part, parent, name, color, Otherpart) --- Similar to t
    part.Name = name
    part.Color = color
    part.CFrame = Otherpart.CFrame
+   return part --- Gives the information back.
 end
 
 
