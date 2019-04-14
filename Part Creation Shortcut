@@ -1,4 +1,4 @@
-function CurrentCode()  -- Everytime we create a part, we have to do what follows in this function.
+function CurrentCode()  --- Everytime we create a part, we have to do what follows in this function.
    local Brick = workspace.Brick
    local Part = Instance.new("Part") --- or Instance.new("Part", workspace) with workspace being its parent.
    Part.Parent = workspace
